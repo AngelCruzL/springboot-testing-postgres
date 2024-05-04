@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: springbootApp
+    image: postgres:14.3
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: springboot_app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Secret123
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
