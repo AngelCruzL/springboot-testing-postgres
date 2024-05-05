@@ -1,0 +1,25 @@
+### Get all students
+GET {{host}}/students
+
+### Create a student
+POST {{host}}/students
+Content-Type: application/json
+
+{
+  "firstName": "Ángel",
+  "lastName": "Cruz",
+  "email": "me@angelcruzl.dev"
+}
+
+### Update a student
+PUT {{host}}/students/2
+Content-Type: application/json
+
+{
+  "firstName": "Luis",
+  "lastName": "Lara",
+  "email": "luis@lara.test"
+}
+
+### Delete a student
+DELETE {{host}}/students/2
